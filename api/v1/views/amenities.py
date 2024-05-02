@@ -7,6 +7,8 @@ from flask import abort, jsonify, make_response, request
 
 
 @app_views.route('/amenities', methods=['GET'], strict_slashes=False)
+@app_views.route('/amenities/<amenity_id>/', methods=['GET'],
+                 strict_slashes=False)
 def get_amenities():
     """
     Retrieves a list of all amenities
